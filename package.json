@@ -13,7 +13,7 @@
     "serve": "vue-cli-service serve",
     "build": "npm run clean && vue-cli-service build --dest lib --target lib --name qr.vue ./src/components/qr.vue",
     "lint": "vue-cli-service lint",
-    "pub": "npm run build && npm run publish --access public"
+    "pub": "npm run build && npm publish --access public"
   },
   "dependencies": {
     "qrcode": "^1.4.4"
