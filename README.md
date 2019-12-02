@@ -13,7 +13,7 @@ Include the script file, then install the component with `Vue.use(qrvue);` e.g.:
 
 ```html
 <script type="text/javascript" src="node_modules/vuejs/dist/vue.min.js"></script>
-<script type="text/javascript" src="node_modules/qr.vue/dist/qr-vue.min.js"></script>
+<script type="text/javascript" src="node_modules/qr.vue/lib/qr.vue.umd.min.js"></script>
 <script type="text/javascript">
   Vue.use(qrvue);
 </script>

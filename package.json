@@ -1,34 +1,33 @@
 {
   "name": "@mesquka/qr.vue",
-  "version": "0.0.1",
-  "description": "QR Code component for Vue",
-  "main": "dist/qrvue.js",
-  "scripts": {
-    "build": "rimraf ./dist && webpack --config ./webpack.config.js"
-  },
+  "version": "0.0.2",
   "author": "Kieran Mesquita",
   "license": "MIT",
-  "dependencies": {
-    "qrcode": "^1.4.4"
-  },
+  "main": "lib/qr.vue.common.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/mesquka/qr.vue"
   },
+  "scripts": {
+    "clean": "rimraf dist && rimraf lib",
+    "serve": "vue-cli-service serve",
+    "build": "npm run clean && vue-cli-service build --dest lib --target lib --name qr.vue ./src/components/qr.vue",
+    "lint": "vue-cli-service lint",
+    "pub": "npm run build && npm run publish --access public"
+  },
+  "dependencies": {
+    "qrcode": "^1.4.4"
+  },
   "devDependencies": {
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-runtime": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-2": "^6.11.0",
-    "babel-runtime": "^6.9.2",
-    "rimraf": "^2.6.1",
-    "vue": "^2.2.1",
-    "vue-html-loader": "^1.2.3",
-    "vue-loader": "^11.1.4",
-    "vue-style-loader": "^2.0.3",
-    "vue-template-compiler": "^2.2.1",
-    "webpack": "1.13.1",
-    "webpack-merge": "^4.1.0"
+    "core-js": "^3.4.3",
+    "vue": "^2.6.10",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }
