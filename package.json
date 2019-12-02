@@ -15,9 +15,6 @@
     "type": "git",
     "url": "git://github.com/mesquka/qr.vue"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
